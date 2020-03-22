@@ -74,10 +74,21 @@ WSGI_APPLICATION = 'stockmarket.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+#DATABASES = {
+ #   'default': {
+  #      'ENGINE': 'django.db.backends.sqlite3',
+   #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #}
+#}
+    
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd3is5a9feb3e8d',
+        'USER': 'kbfsbuzabdeeju',
+        'PASSWORD': '90d153504cb732314c206b3308b393726dcb0b7674dbab6b62bae065706d8a81',
+        'HOST': 'ec2-52-202-185-87.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
