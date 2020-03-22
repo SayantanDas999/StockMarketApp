@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block content %}
+<br/>
+{% if api %}
+	{% if api == "Error"%}
+		<p>There was an error. Please try again..</p>
+	{% else %}
+		<h3>{{ api.companyName }}</h3><br/>
+		<b>Price:</b> ${{ api.latestPrice }}<br/>
+		<b>Previous Close:</b> ${{ api.previousClose }}<br/>
+		<b>MarketCap:</b> ${{ api.marketCap }}<br/>
+		<b>YTD Change:</b> ${{ api.ytdChange }}<br/>
+		<b>52 Week High:</b> ${{ api.week52High }}<br/>
+		<b>52 Week Low:</b> ${{ api.week52Low }}<br/>
+	{% endif %}
+{% endif %}
+<div class="container">
+	<br/>
+	<h3>{{ message }}</h3>
+</div>
+{% endblock %}
